@@ -40,7 +40,7 @@ def map_marker():
 
 if __name__ == "__main__":
 
-    // Some privacy items has been hidden. You need the dynamodb API ID, KEY and table name to access your table on AWS.
+    // Some privacy items were hid. You need the dynamodb API ID, KEY and table name to access your table on AWS.
 
     response = table.scan()
 
