@@ -15,9 +15,14 @@ As the result, there will be an extra spaces for the next ship to unload.
 ![image](https://github.com/r09631003/container_tracking/blob/main/system_structure.png)
 
 - The code for GPS Endnode  
-GPS_NODE.ino
-- The code for Gateway(LoRa Server)  
-GPSLoRaServer.ino 
+GPS_NODE.ino  
+
+- The code for Gateway  
+GPSLoRaServer.ino (LoRa Server)  
+
+- The code for web GUI  
+main.py (access to dynamodb and build map)  
+readDynamodb.py (extract the data from dynamodb)
 
 # Reference
 GPS code  
