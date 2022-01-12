@@ -45,7 +45,8 @@ if __name__ == "__main__":
     response = table.scan()
 
     data = response['Items']
-
+    
+    // import readfile.py; there are 2 modes to read the table in Dynamodb
     r = readDB()
     
     // Mode 1 : enter the time interval and the devices name, you can see the container routes in that time interval
