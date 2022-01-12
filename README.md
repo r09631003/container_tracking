@@ -1,5 +1,5 @@
 # IoT Final Project: Container tracking
-This is the final project of the "Introduction to the Internet of Things" given by NTUEE.
+This is the final project of the "Introduction to the Internet of Things" given by NTUEE.  
 Here are some brief explaination of our container tracking system.  
 The detailed structure and method can be seen in the PPT.
 
