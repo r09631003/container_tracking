@@ -59,38 +59,6 @@ void deepSleepMode(int sleepTimes){
   }
 }
 
-void sendUBX(uint8_t *MSG, uint8_t len){
-  
-  for(int i=0; i<len; i++) {
-    ss.write(MSG[i]);
-  }
-}
-
-void powerSet(){
-    CK_A = 0;
-    CK_B = 0;
-    MSG[0] = 0xb5;
-    MSG[1] = 0x62;
-    MSG[2] = 0x06;
-    MSG[3] = 0x86;
-    MSG[4] = 0x08;
-    MSG[5] = 0x00;
-    MSG[6] = 0x03;
-    MSG[7] = 0x00;
-    MSG[8] = 0x00;
-    MSG[9] = 0x00;
-
-    for(int i = 2; i <= 9; i++){
-        CK_A = CK_A + MSG[i];
-        CK_B = CK_B + CK_A;
-    }
-
-    MSG[10] = CK_A & 0xff;
-    MSG[11] = CK_B & 0xff;
-    sendUBX(MSG, sizeof(MSG)/sizeof(uint8_t));
-}
-
-
 void setup(){
   Serial.begin(9600);
   ss.begin(GPSBaud);
