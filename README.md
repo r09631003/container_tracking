@@ -11,8 +11,10 @@ The target groups of the system are dock workers and drivers in the freight indu
 # System structure
 ![image](https://github.com/r09631003/container_tracking/blob/main/system_structure.png)
 
-- The code for GPS Endnode  GPS_NODE.ino
-- The code for Gateway(LoRa Server) GPSLoRaServer.ino 
+- The code for GPS Endnode  
+GPS_NODE.ino
+- The code for Gateway(LoRa Server)  
+GPSLoRaServer.ino 
 
 # Reference
 GPS code
