@@ -31,3 +31,9 @@ https://github.com/rocketscream/Low-Power
 
 LoRa Library(RadioHead)
 https://github.com/kenbiba/RH-RF95
+
+boto3(reading data in dynamodb table)  
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.03.html
+
+folium(openstreetmap)
+https://blog.yeshuanova.com/2017/10/python-visulization-folium/
