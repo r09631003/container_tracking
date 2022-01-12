@@ -40,13 +40,7 @@ def map_marker():
 
 if __name__ == "__main__":
 
-    //AWS API ID & KEY
-    ACCESS_ID = 'YOUR_ACCESS_ID'
-    ACCESS_KEY = 'YOUR_ACCESS_KEY'
-    dynamodb = boto3.resource('dynamodb', region_name='YOUR_REGION', aws_access_key_id=ACCESS_ID,
-                              aws_secret_access_key=ACCESS_KEY)
-    
-    table = dynamodb.Table('YOUR_DYNAMODB_TABLE_NAME')
+    // Some privacy items has been hidden. You need the dynamodb API ID, KEY and table name to access your table on AWS.
 
     response = table.scan()
 
