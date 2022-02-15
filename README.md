@@ -2,6 +2,7 @@
 This is the final project of "物聯網導論" given by NTUEE.  
 Here are some brief explainations of our container tracking system.  
 The detailed structure and methods can be seen in the pdf file.  
+DEMO video: https://www.youtube.com/watch?v=oz2Os-W-Wic&ab_channel=%E9%84%AD%E5%AD%90%E6%8F%9A
 
 # Background
 In response to the spread of the COVID-19, the dock workers work in turn to prevent the virus from spreading. This measure leaded to a shortage of manpower at container port. However, the demands for goods have not decreased because of the epidemic. And that is the reason of the port congetion in worldwide which causes the insufficient supply in the market and the surging shipping cost
