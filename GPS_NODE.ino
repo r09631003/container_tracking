@@ -12,7 +12,8 @@
 #define RFM95_INT 2            //(interrupt 0 pin D2)
 // Singleton instance of the radio driver
 RH_RF95 rf95(RFM95_CS, RFM95_INT); // RH_RF95 rf95(10, 2); // Dragino with RFM95
-#define RF95_FREQ 905.1    //頻率915.0MHz
+#define RF95_FREQ 905.1
+#define LEDPIN 7
 
 
 // The TinyGPS++ object
@@ -21,7 +22,6 @@ TinyGPSPlus gps;
 //pin and baud rate define 
 static const int RXPin = 4, TXPin = 3;
 static const uint32_t GPSBaud = 9600;
-const int ledPin = 7;
 
 // The serial connection to the GPS device
 SoftwareSerial ss(RXPin, TXPin);
