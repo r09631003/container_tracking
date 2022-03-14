@@ -69,13 +69,13 @@ void setup(){
 
 void loop(){
 
-  if(sleepFlag == false){
+  if(!sleepFlag){
     ss.begin(GPSBaud);
     findFlag = false;
-    while (findFlag == false && sleepFlag == false && ss.available() > 0){
+    while (!findFlag && !sleepFlag && ss.available() > 0){
       gps.encode(ss.read());
       if (gps.location.isUpdated()){
-        if(gps.satellites.value() > 3)
+        if(gps.satellites.value() >= 3)
           findFlag = true;
         else
           findFlag = false;
