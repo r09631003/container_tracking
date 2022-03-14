@@ -60,7 +60,7 @@ void deepSleepMode(int sleepTimes){
 void setup(){
   Serial.begin(9600);
   ss.begin(GPSBaud);
-  pinMode(ledPin, OUTPUT);
+  pinMode(LEDPIN, OUTPUT);
   
   if (!rf95.init()){
     Serial.println("init failed");   
