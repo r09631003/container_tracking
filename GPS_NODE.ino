@@ -47,9 +47,6 @@ int sleepTimes = 0;
 const int totalSleepTimes = 2;
 bool sleepFlag = false;
 
-uint8_t MSG[12];
-uint32_t CK_A, CK_B;
-
 void deepSleepMode(int sleepTimes){
   LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF); 
   if(sleepTimes == totalSleepTimes){
