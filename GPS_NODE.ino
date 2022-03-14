@@ -75,13 +75,13 @@ void loop(){
     while (findFlag == false && sleepFlag == false && ss.available() > 0){
       gps.encode(ss.read());
       if (gps.location.isUpdated()){
-        if(gps.satellites.value() > 0)
+        if(gps.satellites.value() > 3)
           findFlag = true;
         else
           findFlag = false;
       }
 
-      if (findFlag == true){
+      if (findFlag){
         //Serial.print("Lat= "); 
         Serial.print(gps.location.lat(), digit);
         
@@ -113,7 +113,6 @@ void loop(){
         timeCur = hourCur + minCur + secCur;
   
         uint8_t data[48];
-        //String total_countString = String(latCur,digit);
         String total_countString = dateCur + " " + timeCur + " " + device + " " + String(latCur,digit)+ " " + String(lngCur,digit);
         for (int i=0 ; i< 48; i++){
             data[i] = total_countString.charAt(i);
@@ -128,8 +127,6 @@ void loop(){
           if (rf95.recv(buf, &len)){
               Serial.print("got reply: ");
               Serial.println((char*)buf);
-
-              
            
               String lineOut= (char*)buf;
               lineOut= lineOut+ "                         ";
