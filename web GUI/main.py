@@ -17,7 +17,7 @@ def map_marker():
          tiles='Stamen Terrain',
          zoom_start=15
     )
-    c = 0
+    c = 0  //index in coloList
     for d in newData:
         if d["Device_Name"] not in colorDict:
             colorDict[d["Device_Name"]] = colorList[c]
