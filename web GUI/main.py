@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask                 //python web package
 from flask import render_template
-import folium
-import boto3
+import folium                           //map drawing package
+import boto3                            //local connect server
 from readfile import readDB
 
 app = Flask(__name__)
