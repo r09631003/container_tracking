@@ -29,8 +29,6 @@ SoftwareSerial ss(RXPin, TXPin);
 //satellites found 
 bool findFlag = false;
 
-int counter=0;
-
 //broadcast content
 double latCur = 0;
 double lngCur = 0;
@@ -76,8 +74,6 @@ void loop(){
 
   if(sleepFlag == false){
     ss.begin(GPSBaud);
-    //powerSet(0x00);
-    //delay(1000);
     findFlag = false;
     while (findFlag == false && sleepFlag == false && ss.available() > 0){
       gps.encode(ss.read());
@@ -154,14 +150,12 @@ void loop(){
         }
         
         delay(4000);
-        counter++;
         sleepFlag = true;
       }
     }
   }
 
   else{
-      //powerSet();
       ss.end();
       while(sleepTimes<=totalSleepTimes){
           if(sleepTimes == 0){
